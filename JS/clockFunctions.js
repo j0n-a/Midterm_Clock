@@ -43,14 +43,14 @@ function updateTimeLeft() {
         timeLeftFormatting.style.fontWeight = "bold";
     }
     if (diff <= 0) {
-        timeLeftFormatting.textContent = "Your midterm time is up. Turn in your exam now.";
+        timeLeftFormatting.textContent = "Your exam time is up. Turn in your exam now.";
         timeLeftFormatting.style.color = "red";
         timeLeftFormatting.style.fontWeight = "bold";
         return;
     }
     const hoursLeft = Math.floor(diff / (1000 * 60 * 60));
     const minutesLeft = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    if (withSeconds.checked || minutesLeft < 5) {
+    if (withSeconds.checked || diff <= 5 * 60 * 1000) {
         const secondsLeft = Math.floor((diff % (1000 * 60)) / 1000);
         timeLeftFormatting.textContent = `Time left: ${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`;
     } else {
@@ -62,7 +62,7 @@ function updateTimeLeft() {
 function showEndTime() {
     const endHours = String(endTime.getHours()).padStart(2, '0');
     const endMinutes = String(endTime.getMinutes()).padStart(2, '0');
-    document.getElementById('end-time').textContent = `Your Midterm ends at: ${endHours}:${endMinutes}`;
+    document.getElementById('end-time').textContent = `Your exam ends at: ${endHours}:${endMinutes}`;
 }
 
 // make the openPrompt function for the button
