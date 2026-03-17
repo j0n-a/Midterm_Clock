@@ -10,15 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/COGS2MidtermStyle.css">
-    <title>COGS2 Midterm Clock</title>
+    <script src="JS/clockFunctions.js" defer></script>
+    <title>Test Clock</title>
 </head>
 <body>
     <div class="container">
-        <h1>COGS2 Midterm Clock</h1>
+        <h1 id="exam-title"></h1>
         <div id="clock"></div>
         <div id="end-time"></div>
         <div id="time-left"></div>
         <button onclick="openPrompt()">Update Midterm End Time</button>
+        <input type="checkbox" id="myCheck" name="secondsCheck" value="show-seconds">
+        <label id="label-text" for="myCheck"> Show seconds?</label>   
     </div>
-    <script src="JS/clockFunctions.js"></script>
 </body>

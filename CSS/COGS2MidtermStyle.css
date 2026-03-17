@@ -65,3 +65,17 @@ button:hover {
     margin-top: 2vh;
     color: #679de9;/* light blue-gray */
 }
+
+#label-text {
+    font-family: monaco, monospace;
+    text-align: center;
+    font-size: clamp(0.5em, 1vw, 4em);
+    margin-top: 2vh;
+    color: #679de9;/* light blue-gray */
+}
+
+input[type="checkbox"] {
+    accent-color: #679de9;
+    width: clamp(0.5em, 1vw, 4em);
+    height: clamp(0.5em, 1vw, 4em);
+  }
